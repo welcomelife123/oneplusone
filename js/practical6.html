@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array Operations</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <hr>
+    <!-- User input for array length and elements -->
+    <div>
+      <h2>Create Array</h2>
+      <label for="arrayLength">Enter the length:</label><br>
+      <input type="number" id="arrayLength"><br>
+      <button onclick="createArray()">Create Array</button>
+      <div id="displayArrayCreate"></div>
+    </div>
+
+    <!-- Input for array elements -->
+    <div class="operation-container">
+      <h2>Input Array Elements</h2>
+      <input type="text" id="arrayElement" placeholder="Enter an element"><br>
+      <button onclick="addElement()">Add</button>
+      <div id="displayArrayAdd"></div>
+    </div>
+
+    <!-- Display the created array -->
+    <div class="operation-container">
+      <h2>Display Array</h2>
+      <button onclick="displayArray()">Display</button>
+      <div id="displayArray"></div>
+    </div>
+    <hr>
+    <!-- Remove Element by Custom Method -->
+    <div class="operation-container">
+      <h2>Remove Element by user-defined Method</h2>
+      <label for="elementToRemove">Enter an element to remove:</label><br>
+      <input type="text" id="elementToRemove"><br>
+      <button onclick="removeElementCustom()">Remove </button>
+      <div id="displayArrayRemoveCustom"></div>
+    </div>
+    <!-- Remove Element by Splice Method -->
+    <div class="operation-container">
+      <h2>Remove Element by Splice Method</h2>
+      <label for="elementToRemoveSplice">Enter an element to remove:</label><br>
+      <input type="text" id="elementToRemoveSplice"><br>
+      <button onclick="removeElementSplice()">Remove </button>
+      <div id="displayArrayRemoveSplice"></div>
+    </div>
+    <hr>
+    <!-- Check Element by Custom Method -->
+    <div class="operation-container">
+      <h2>Check Element by user-defined Method</h2>
+      <label for="elementToCheck">Enter an element to search:</label><br>
+      <input type="text" id="elementToCheck"><br>
+      <button onclick="checkElementCustom()">Search</button>
+      <div id="displayArrayCheckCustom"></div>
+    </div>
+    <!-- Check Element by Includes Method -->
+    <div class="operation-container">
+      <h2>Check Element by Includes Method</h2>
+      <label for="elementToCheckIncludes">Enter an element to search:</label><br>
+      <input type="text" id="elementToCheckIncludes"><br>
+      <button onclick="checkElementIncludes()">Search</button>
+      <div id="displayArrayCheckIncludes"></div>
+    </div>
+    <hr>
+    <!-- Empty Array by Custom Method -->
+    <div class="operation-container">
+      <h2>Empty Array by user-defined Method</h2>
+      <button onclick="emptyArrayCustom()">Empty Array</button>
+      <div id="displayArrayEmptyCustom"></div>
+    </div>
+    <!-- Empty Array by Reassignment -->
+    <div class="operation-container">
+      <h2>Empty Array by Reassignment</h2>
+      <button onclick="emptyArrayReassign()">Empty Array</button>
+      <div id="displayArrayEmptyReassign"></div>
+    </div>
+    <hr>
+  </center>
+  <script>
+    let userArray = [];
+
+    // Function to create an array based on user input 
+    function createArray() {
+      const arrayLength = parseInt(document.getElementById("arrayLength").value);
+      userArray = [];
+      for (let i = 0; i < arrayLength; i++) {
+        userArray.push("");
+      }
+      document.getElementById("displayArrayCreate").textContent = `Array created: [${userArray.join(", ")}]`;
+    }
+
+    // Function to add an element to the array 
+    function addElement() {
+      const arrayElement = document.getElementById("arrayElement").value;
+      const index = userArray.indexOf("");
+      if (index !== -1) {
+        userArray[index] = arrayElement;
+      }
+      document.getElementById("displayArrayAdd").textContent = `Element added: [${userArray.join(", ")}]`;
+    }
+
+    // Function to display the created array 
+    function displayArray() {
+      document.getElementById("displayArray").textContent = `Array: [${userArray.join(", ")}]`;
+    }
+
+    // Function to remove an element from the array using a loop (Custom Method)
+    function removeElementCustom() {
+      const elementToRemove = document.getElementById("elementToRemove").value;
+      for (let i = 0; i < userArray.length; i++) {
+        if (userArray[i] === elementToRemove) {
+          userArray.splice(i, 1);
+          break;
+        }
+      }
+      document.getElementById("displayArrayRemoveCustom").textContent =
+        `Element removed: [${userArray.join(", ")}]`;
+    }
+
+    // Function to remove an element from the array using splice method (Splice Method)
+    function removeElementSplice() {
+      const elementToRemove = document.getElementById("elementToRemoveSplice").value;
+      const index = userArray.indexOf(elementToRemove);
+      if (index !== -1) {
+        userArray.splice(index, 1);
+        document.getElementById("displayArrayRemoveSplice").textContent =
+          `Element removed: [${userArray.join(", ")}]`;
+      }
+    }
+
+    // Function to check if an element exists in the array using a loop (Custom Method)
+    function checkElementCustom() {
+      const elementToCheck = document.getElementById("elementToCheck").value;
+      let exists = false;
+      for (let i = 0; i < userArray.length; i++) {
+        if (userArray[i] === elementToCheck) {
+          exists = true;
+          break;
+        }
+      }
+      if (exists) {
+        document.getElementById("displayArrayCheckCustom").textContent =
+          `${elementToCheck} exists in the array.`;
+      } else {
+        document.getElementById("displayArrayCheckCustom").textContent =
+          `${elementToCheck} does not exist in the array.`;
+      }
+    }
+
+    // Function to check if an element exists in the array using includes method (Includes Method)
+    function checkElementIncludes() {
+      const elementToCheck = document.getElementById("elementToCheckIncludes").value;
+      const exists = userArray.includes(elementToCheck);
+      if (exists) {
+        document.getElementById("displayArrayCheckIncludes").textContent =
+          `${elementToCheck} exists in the array.`;
+      } else {
+        document.getElementById("displayArrayCheckIncludes").textContent =
+          `${elementToCheck} does not exist in the array.`;
+      }
+    }
+
+   // Function to empty the array (Custom Method)
+   function emptyArrayCustom() {
+      userArray = [];
+      document.getElementById("displayArrayEmptyCustom").textContent = "Array is now empty.";
+    }
+
+    // Function to empty the array by reassignment (Reassignment)
+    function emptyArrayReassign() {
+      userArray = [];
+      document.getElementById("displayArrayEmptyReassign").textContent = "Array is now empty.";
+    }
+  </script>
+</body>
+
+</html>
+
+
+
+Initialization:
+    Initialize an empty array userArray to store user input.
+Create Array:
+    Create a function createArray():
+    Get the array length from user input.
+    Reset userArray to an empty array.
+    Use a loop to push empty strings into userArray based on the specified length.
+    Display the created array.
+Add Element:
+    Create a function addElement():
+    Get the array element from user input.
+    Find the first empty slot in userArray and replace it with the new element.
+    Display the array with the added element.
+Display Array:
+    Create a function displayArray():
+    Display the current content of userArray.
+    Remove Element by Custom Method:
+Create a function removeElementCustom():
+    Get the element to remove from user input.
+    Use a loop to find and remove the specified element from userArray.
+    Display the array after removal.
+Remove Element by Splice Method:
+    Create a function removeElementSplice():
+    Get the element to remove from user input.
+    Use the splice method to remove the specified element from userArray.
+    Display the array after removal.
+Check Element by Custom Method:
+    Create a function checkElementCustom():
+    Get the element to check from user input.
+    Use a loop to check if the element exists in userArray.
+    Display the result.
+Check Element by Includes Method:
+    Create a function checkElementIncludes():
+    Get the element to check from user input.
+    Use the includes method to check if the element exists in userArray.
+    Display the result.
+Empty Array by Custom Method:
+    Create a function emptyArrayCustom():
+    Reset userArray to an empty array.
+    Display a message indicating that the array is empty.
+Empty Array by Reassignment:
+    Create a function emptyArrayReassign():
+    Reset userArray to an empty array.
+    Display a message indicating that the array is empty.
+End of Algorithm

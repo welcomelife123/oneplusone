@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h3>42201_Pratiksha_Adatkar </h3>
+    <title>String Comparison</title>
+</head>
+
+<body style="text-align: center;">
+    <center>
+        <h2>Exp_4 :String Comparison</h2>
+        <input type="text" id="string1" placeholder="String 1">
+        <br>
+        <br>
+        <input type="text" id="string2" placeholder="String 2">
+        <br>
+        <br>
+        <button onclick="compareEquality()">Compare Equality</button>
+        <div id="resultEquality"></div>
+        <br>
+        <br>
+        <button onclick="compareLength()">Compare Length</button>
+        <div id="resultLength"></div>
+        <br>
+        <br>
+        <button onclick="compareLocaleCompare()">Compare localeCompare()</button>
+        <div id="resultLocaleCompare"></div>
+        <br>
+        <br>
+        <button onclick="resetfields()">Reset</button>
+
+        <script>
+            function compareEquality() {
+                const string1 = document.getElementById('string1').value;
+                const string2 = document.getElementById('string2').value;
+                const result = document.getElementById('resultEquality');
+
+                if (string1 === string2) {
+                    result.innerHTML = 'Strings are equal using equality operator';
+                } else {
+                    result.innerHTML = 'Strings are not equal using equality operator';
+                }
+            }
+
+            function compareLength() {
+                const string1 = document.getElementById('string1').value;
+                const string2 = document.getElementById('string2').value;
+                const result = document.getElementById('resultLength');
+
+                if (string1.length > string2.length || string2.length > string1.length) {
+                    result.innerHTML = 'Strings are not equal using length comparison';
+                } else if (string1 === string2) {
+                    result.innerHTML = 'Strings are equal';
+                } else {
+                    result.innerHTML = 'Strings are not equal';
+                }
+            }
+
+            function compareLocaleCompare() {
+                const string1 = document.getElementById('string1').value;
+                const string2 = document.getElementById('string2').value;
+                const result = document.getElementById('resultLocaleCompare');
+
+                if (string1.localeCompare(string2) === 0) {
+                    result.innerHTML = 'Strings are equal using localeCompare() function';
+                } else if (string1.localeCompare(string2) === 1) {
+                    result.innerHTML = 'String 1 is greater than String 2';
+                } else {
+                    result.innerHTML = 'String 2 is greater than String 1';
+                }
+            }
+
+            function resetfields() {
+                document.getElementById('string1').value = '';
+                document.getElementById('string2').value = '';
+                document.getElementById('resultEquality').innerHTML = '';
+                document.getElementById('resultLength').innerHTML = '';
+                document.getElementById('resultLocaleCompare').innerHTML = '';
+            }
+        </script>
+    </center>
+</body>
+
+</html>
+
+
+
+
+Initialization:
+    Declare variables string1, string2 to store input strings.
+    Declare variables resultEquality, resultLength, and resultLocaleCompare to display results.
+Function compareEquality:
+    Get the values of string1 and string2 from input fields.
+    Compare string1 and string2 using the equality operator (===).
+    If equal, set resultEquality to 'Strings are equal using equality operator', otherwise set it to 'Strings are not equal using equality operator'.
+Function compareLength:
+    Get the values of string1 and string2 from input fields.
+    Compare the lengths of string1 and string2.
+    If lengths are not equal, set resultLength to 'Strings are not equal using length comparison'.
+    If lengths are equal, compare string1 and string2 using the equality operator.
+    If equal, set resultLength to 'Strings are equal'.
+    If not equal, set resultLength to 'Strings are not equal'.
+Function compareLocaleCompare:
+    Get the values of string1 and string2 from input fields.
+    Use the localeCompare() method to compare string1 and string2.
+    If the result is 0, set resultLocaleCompare to 'Strings are equal using localeCompare() function'.
+    If the result is 1, set resultLocaleCompare to 'String 1 is greater than String 2'.
+    If the result is -1, set resultLocaleCompare to 'String 2 is greater than String 1'.
+Function resetfields:
+    Reset the values of string1 and string2 to an empty string.
+    Clear the content of resultEquality, resultLength, and resultLocaleCompare.

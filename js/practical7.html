@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>experiment 7</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <h1>42201_Pratiksha_Adatkar</h1>
+    <h2>Array and Object Operations</h2>
+    <!-- User input for array length and elements -->
+    <label for="arrayLength">Enter the length of the array:</label>
+    <input type="number" id="arrayLength">
+    <button onclick="getArrayElements()">Add Elements to Array</button>
+    <button onclick="resetForm()">Reset</button> <!-- Add Reset Button -->
+    <br>
+    <br>
+    <!-- Array input form -->
+    <div id="arrayInput"></div>
+    <br>
+
+    <!-- Display the array -->
+    <div id="arrayOutput"></div>
+    <br>
+    <!-- Input form to get two objects -->
+    <label for="object1">Enter the first object:</label>
+    <input type="text" id="object1">
+    <br>
+    <br>
+    <label for="object2">Enter the second object:</label>
+    <input type="text" id="object2">
+    <br>
+    <br>
+    <button onclick="displayAndAddObjectPair()">Display Object Pair</button>
+    <br>
+    <br>
+    <!-- Display the object pair -->
+    <div id="objectPairOutput"></div>
+    <br>
+    <!-- Button to add the object pair to the array -->
+    <button onclick="appendObjectPair()">Add Object Pair to Array</button>
+    <br>
+    <br>
+    <!-- Button to create and display the table -->
+    <button onclick="createAndDisplayTable()">Create Table</button>
+    <br>
+    <br>
+    <!-- Table to display array elements, data types, and isArray check -->
+    <h3>Array Elements and Data Types</h3>
+    <table id="arrayTable">
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Data Type</th>
+                <th>Is Array?</th>
+            </tr>
+        </thead>
+        <tbody id="arrayTableBody"></tbody>
+    </table>
+    <script>
+        let userArray = [];
+
+        // Function to get array elements from the user
+        function getArrayElements() {
+            const arrayLength = parseInt(document.getElementById("arrayLength").value);
+            userArray = [];
+            const arrayInputDiv = document.getElementById("arrayInput");
+            arrayInputDiv.innerHTML = "";
+            for (let i = 0; i < arrayLength; i++) {
+                const input = document.createElement("input");
+                input.type = "text";
+                input.placeholder = `Element ${i + 1}`;
+                arrayInputDiv.appendChild(input);
+            }
+            const addElementsButton = document.createElement("button");
+            addElementsButton.textContent = "Add Elements";
+            addElementsButton.onclick = () => {
+                userArray = Array.from(arrayInputDiv.querySelectorAll("input")).map(input =>
+                    input.value);
+                displayArray();
+            };
+            arrayInputDiv.appendChild(addElementsButton);
+        }
+
+        // Function to display the array
+        function displayArray() {
+            const arrayOutputDiv = document.getElementById("arrayOutput");
+            arrayOutputDiv.innerHTML = `Array: [${userArray.map(obj =>
+                JSON.stringify(obj)).join(", ")}]`;
+        }
+
+        // Function to create and display the table
+        function createAndDisplayTable() {
+            const tableBody = document.getElementById("arrayTableBody");
+            tableBody.innerHTML = "";
+            for (let i = 0; i < userArray.length; i++) {
+                const element = userArray[i];
+                const dataType = typeof element;
+                const isArray = Array.isArray(element);
+                const row =
+                    `<tr><td>${JSON.stringify(element)}</td><td>${dataType}</td><td>${isArray}</td></tr>`;
+                tableBody.innerHTML += row;
+            }
+        }
+
+        // Function to display the object pair
+        function displayAndAddObjectPair() {
+            const object1 = document.getElementById("object1").value;
+            const object2 = document.getElementById("object2").value;
+            const objectPair = { object1, object2 };
+            displayObjectPair(objectPair);
+        }
+
+        // Function to display the object pair
+        function displayObjectPair(objectPair) {
+            const objectPairOutputDiv = document.getElementById("objectPairOutput");
+            objectPairOutputDiv.innerHTML = `Object Pair: { object1: "${objectPair.object1}",
+        object2: "${objectPair.object2}" }`;
+        }
+
+        // Function to append the object pair to the array
+        function appendObjectPair() {
+            const object1 = document.getElementById("object1").value;
+            const object2 = document.getElementById("object2").value;
+            const objectPair = { object1, object2 };
+            userArray.push(objectPair);
+            // Display the updated array
+            displayArray();
+        }
+
+        // Function to reset the form
+        function resetForm() {
+            userArray = [];
+            document.getElementById("arrayLength").value = ''; // Clear the input field for array length
+            document.getElementById("arrayInput").innerHTML = ''; // Clear the input fields for array elements
+            document.getElementById("arrayOutput").textContent = ''; // Clear the display for the array
+            document.getElementById("object1").value = ''; // Clear the input field for the first object
+            document.getElementById("object2").value = ''; // Clear the input field for the second object
+            document.getElementById("objectPairOutput").textContent = ''; // Clear the display for the object pair
+            const tableBody = document.getElementById("arrayTableBody");
+            tableBody.innerHTML = ''; // Clear the table body
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+Initialization:
+    Initialize an empty array userArray to store user input.
+getArrayElements Function:
+    Get the array length from the user input.
+    Create input fields dynamically based on the array length.
+    Add a button to trigger the addition of elements to the array.
+    On button click, populate userArray with the values from the input fields.
+    Call displayArray to display the updated array.
+displayArray Function:
+    Get the arrayOutputDiv element.
+    Display the array elements inside arrayOutputDiv.
+createAndDisplayTable Function:
+    Get the tableBody element.
+    Clear the table body.
+    Iterate through userArray elements:
+    Get the element, its data type, and whether it's an array.
+    Create a table row with this information.
+    Append the row to the table body.
+displayAndAddObjectPair Function:
+    Get the values of two objects from user input.
+    Call displayObjectPair to display the object pair.
+displayObjectPair Function:
+    Get the objectPairOutputDiv element.
+    Display the object pair inside objectPairOutputDiv.
+appendObjectPair Function:
+    Get the values of two objects from user input.
+    Create an object pair and push it into userArray.
+    Call displayArray to display the updated array.
+resetForm Function:
+    Reset all form-related elements:
+    Clear userArray.
+    Clear the input field for array length.
+    Clear the input fields for array elements.
+    Clear the display for the array.
+    Clear the input fields for the first and second objects.
+    Clear the display for the object pair.
+    Clear the table body.
+HTML Structure:
+    Input fields for array length, object values, and buttons to trigger various operations.
+    Dynamic creation of input fields for array elements.
+    Display areas for array, object pair, and array-related information in a table.

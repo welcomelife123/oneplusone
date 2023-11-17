@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validate() {
+            // Regular expressions
+            var nameRegex = /^[A-Za-z\s]+$/;
+            var phoneRegex = /^\d{10}$/;
+            var emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+
+            // Validation logic
+            if (document.StudentRegistration.textnames.value === "" || !document.StudentRegistration.textnames.value.match(nameRegex)) {
+                alert("Please provide a valid Name!");
+                document.StudentRegistration.textnames.focus();
+                return false;
+            }
+
+            if (document.StudentRegistration.emailid.value === "" || !document.StudentRegistration.emailid.value.match(emailRegex)) {
+                alert("Please provide a valid email ID!");
+                document.StudentRegistration.emailid.focus();
+                return false;
+            }
+
+            if (document.StudentRegistration.mobileno.value === "" || !document.StudentRegistration.mobileno.value.match(phoneRegex)) {
+                alert("Please provide a valid 10-digit Mobile No!");
+                document.StudentRegistration.mobileno.focus();
+                return false;
+            }
+
+            alert("Entered Details Updated Successfully!");
+            return true;
+        }
+
+        function displayInformation() {
+            var name = document.getElementById("textname").value;
+            var email = document.getElementById("emailid").value;
+            var mobile = document.getElementById("mobileno").value;
+            var gender = document.getElementById("Gender").value;
+            var state = document.getElementById("State").value;
+            var city = document.getElementById("city").value;
+            var address = document.getElementById("Address").value;
+
+            var information =
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Mobile No: " + mobile + "\n" +
+                "Gender: " + gender + "\n" +
+                "State: " + state + "\n" +
+                "City: " + city + "\n" +
+                "Address: " + address;
+
+            alert("Entered Information:\n\n" + information);
+        }
+    </script>
+</head>
+<body style="text-align: center">
+<div class="container" style="text-align:center">
+    <form action="#" name="StudentRegistration" onsubmit="return(validate());" style="text-align: center">
+        <br>
+        <div>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="textnames" id="textname" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td>EmailId</td>
+                <td><input type="text" name="emailid" id="emailid" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td>MobileNo</td>
+                <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <label for="Gender">Gender</label>
+            <select name="Gender" id="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <br>
+        <div>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="State" id="State" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="city" id="city" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="Address" id="Address" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td><input type="reset"></td>
+                <td colspan="2">
+                    <input type="submit" value="Submit Form" onclick="displayInformation()"/>
+                    <input type="button" value="Display Information" onclick="displayInformation()"/>
+                </td>
+            </tr>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+
+
+Start:
+Input:
+    Define regular expressions (nameRegex, phoneRegex, emailRegex) for name, phone, and email validation.
+Validation Function (validate):
+    Read the values of name, email, and mobile from the form.
+    Validate the name using nameRegex:
+    If empty or invalid, show an alert and focus on the name field.
+    Validate the email using emailRegex:
+    If empty or invalid, show an alert and focus on the email field.
+    Validate the mobile using phoneRegex:
+    If empty or invalid, show an alert and focus on the mobile field.
+    If all validations pass, show a success alert.
+    Return true if validation is successful, false otherwise.
+Display Information Function (displayInformation):
+    Read values of name, email, mobile, gender, state, city, and address from the form.
+    Create a string with the entered information.
+    Show an alert with the entered information.
+HTML Structure:
+    Create a form with input fields for name, email, mobile, gender, state, city, and address.
+    Add event listeners for form submission and display information button click.
+    Use CSS to style the form elements.
+End:

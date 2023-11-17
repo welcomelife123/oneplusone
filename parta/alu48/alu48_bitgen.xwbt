@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Arti\Downloads\sppu_e-tc_notes_and_praticals-master\sppu_e-tc_notes_and_praticals-master\sem7\vlsi_praticals\parta\parta\alu48\alu48.ncd
+OUTFILE=C:\Users\Arti\Downloads\sppu_e-tc_notes_and_praticals-master\sppu_e-tc_notes_and_praticals-master\sem7\vlsi_praticals\parta\parta\alu48\alu48.bit
+FAMILY=Spartan3E
+PART=xc3s250e-5pq208
+WORKINGDIR=C:\Users\Arti\Downloads\sppu_e-tc_notes_and_praticals-master\sppu_e-tc_notes_and_praticals-master\sem7\vlsi_praticals\parta\parta\alu48
+LICENSE=WebPack
+USER_INFO=212854883_0_0_854

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+
+<body style="text-align: center; background-color: #eee0ff;">
+    <h1>Multiplication Table</h1>
+    <label for="Given">Enter a number:</label>
+    <input type="number" id="Given" placeholder="Enter a number">
+    <br><br>
+    <button onclick="tables()">Click Here For the Table</button>
+    <p>Multiplication Table using For Loop: <span id="displayf"></span></p>
+    <p>Multiplication Table using While Loop: <span id="displayw"></span></p>
+    <p>Multiplication Table using Do-While Loop: <span id="displayd"></span></p>
+
+    <script>
+        function tables() {
+            var Given = Number(document.getElementById("Given").value);
+            var length = 10;
+            var i = 1;
+
+            // ------------- Using for loop -------------
+            var forML = "";
+            for (i = 1; i <= length; i++) {
+                forML += "<br>" + i + "*" + Given + "=" + (i * Given);
+            }
+            document.getElementById("displayf").innerHTML = forML;
+
+            // ------------- Using while loop -------------
+            var whileML = "";
+            i = 1;
+            while (i <= length) {
+                whileML += "<br>" + i + "*" + Given + "=" + (i * Given);
+                i++;
+            }
+            document.getElementById("displayw").innerHTML = whileML;
+
+            // ------------- Using do-while loop -------------
+            var doML = "";
+            i = 1;
+            do {
+                doML += "<br>" + i + "*" + Given + "=" + (i * Given);
+                i++;
+            } while (i <= length);
+            document.getElementById("displayd").innerHTML = doML;
+        }
+    </script>
+</body>
+
+</html>
+
+
+Start:
+Input:
+    Initialize Given, length, and i as integer variables
+    Read the user input for Given (a number)
+For Loop Multiplication Table:
+    Initialize an empty string for the For Loop Multiplication Table (forML)
+    Using a for loop:
+    Loop from i = 1 to i = length
+    Append each multiplication expression to forML
+    Display forML in the HTML element with id "displayf"
+    While Loop Multiplication Table:
+    Initialize an empty string for the While Loop Multiplication Table (whileML)
+    Reset i to 1
+Using a while loop:
+    Continue looping while i is less than or equal to length
+    Append each multiplication expression to whileML
+    Increment i by 1 in each iteration
+    Display whileML in the HTML element with id "displayw"
+    Do-While Loop Multiplication Table:
+    Initialize an empty string for the Do-While Loop Multiplication Table (doML)
+    Reset i to 1
+Using a do-while loop:
+    Execute the loop body at least once
+    Continue looping while i is less than or equal to length
+    Append each multiplication expression to doML
+    Increment i by 1 in each iteration
+    Display doML in the HTML element with id "displayd"
+End

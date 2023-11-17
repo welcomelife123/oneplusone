@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>String Operations</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>String Operations</h1>
+    <br><br>
+    String = <input type="text" id="input"><br><br>
+    <button style="background:pink" onclick="set_string()">Perform Operations</button>
+    <br><br>
+    String = <p id="string"></p>
+    <br><br>
+    Reverse String = <p id="reverse"></p>
+    <br><br>
+    Palindrome Check = <p id="palindrome"></p>
+    <br><br>
+    Index position to replace character = <input type="number" id="change_index"><br>
+    Character to replace at above index position = <input type="text" id="change_char"><br><br>
+    <button style="background:pink" onclick="replace()">Replace Character</button>
+    <br>
+    Updated String =<p id="updated_string"></p>
+
+    <script>
+        function set_string() {
+            var st = document.getElementById("input").value;
+            document.getElementById("string").innerHTML = st;
+            rev(st);
+        }
+
+        function rev(s) {
+            const arrayStrings = s.split("");
+            const reverseArray = arrayStrings.reverse();
+            const joinArray = reverseArray.join("");
+            document.getElementById("reverse").innerHTML = joinArray;
+            palin(s, joinArray);
+        }
+
+        function palin(s, re) {
+            if (s === re) {
+                document.getElementById("palindrome").innerHTML = "String is Palindrome";
+            } else {
+                document.getElementById("palindrome").innerHTML = "String is Not Palindrome";
+            }
+        }
+
+        function replace() {
+            var st = document.getElementById("input").value;
+            var i = parseInt(document.getElementById("change_index").value);
+            var c = document.getElementById("change_char").value;
+            var r = st.substring(0, i) + c + st.substring(i + 1);
+            document.getElementById("updated_string").innerHTML = r;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+Start:
+Input:
+    Initialize st, s, re, i, c, and r as variables
+    Read user input for st (string)
+Set String:
+    Display st in the HTML element with id "string" 
+Reverse String:
+    Initialize an empty string array arrayStrings
+    Split st into arrayStrings
+    Reverse the arrayStrings
+    Join the reversed arrayStrings into joinArray
+    Display joinArray in the HTML element with id "reverse"
+Palindrome Check:
+    If st is equal to joinArray:
+    Display "String is Palindrome" in the HTML element with id "palindrome"
+    Else:
+    Display "String is Not Palindrome" in the HTML element with id "palindrome"
+Replace Character:
+    Read user inputs for i (index position) and c (character to replace)
+    Perform the replacement operation:
+    Set r as st.substring(0, i) + c + st.substring(i + 1)
+    Display r in the HTML element with id "updated_string"
+End
