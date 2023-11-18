@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x8ef4fb42 */
+/* This file is designed for use with ISim build 0x7708f090 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Arti/Downloads/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/alu48/alu48_tb.vhd";
+static const char *ng0 = "C:/Users/Arti/Documents/oneplusone/parta/alu48/alu48_tb.vhd";
 extern char *IEEE_P_3620187407;
 
 char *ieee_p_3620187407_sub_436279890_3965413181(char *, char *, char *, char *, int );
@@ -45,7 +45,7 @@ static void work_a_0913054320_2372691052_p_0(char *t0)
     char *t14;
     int64 t15;
 
-LAB0:    t1 = (t0 + 1620U);
+LAB0:    t1 = (t0 + 2832U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -53,9 +53,9 @@ LAB0:    t1 = (t0 + 1620U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(81, ng0);
-    t2 = (t0 + 776U);
+    t2 = (t0 + 1352U);
     t4 = *((char **)t2);
-    t2 = (t0 + 4132U);
+    t2 = (t0 + 5160U);
     t5 = ieee_p_3620187407_sub_436279890_3965413181(IEEE_P_3620187407, t3, t4, t2, 1);
     t6 = (t3 + 12U);
     t7 = *((unsigned int *)t6);
@@ -64,16 +64,16 @@ LAB2:    xsi_set_current_line(81, ng0);
     if (t9 == 1)
         goto LAB4;
 
-LAB5:    t10 = (t0 + 1852);
-    t11 = (t10 + 32U);
+LAB5:    t10 = (t0 + 3216);
+    t11 = (t10 + 56U);
     t12 = *((char **)t11);
-    t13 = (t12 + 40U);
+    t13 = (t12 + 56U);
     t14 = *((char **)t13);
     memcpy(t14, t5, 3U);
     xsi_driver_first_trans_fast(t10);
     xsi_set_current_line(82, ng0);
     t15 = (10 * 1000LL);
-    t2 = (t0 + 1520);
+    t2 = (t0 + 2640);
     xsi_process_wait(t2, t15);
 
 LAB8:    *((char **)t1) = &&LAB9;

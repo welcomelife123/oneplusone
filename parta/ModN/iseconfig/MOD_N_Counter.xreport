@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-10-24T13:14:11</DateModified>
+  <DateModified>2023-11-18T00:04:09</DateModified>
   <ModuleName>MOD_N_Counter</ModuleName>
   <SummaryTimeStamp>2022-10-24T13:13:43</SummaryTimeStamp>
-  <SavedFilePath>/home/chittaranjan/opt/projects_dir/ModN/iseconfig/MOD_N_Counter.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/chittaranjan/opt/projects_dir/ModN/</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Arti/Documents/oneplusone/parta/ModN/iseconfig/MOD_N_Counter.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Arti/Documents/oneplusone/parta/ModN\</ImplementationReportsDirectory>
   <DateInitialized>2022-09-29T16:21:52</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

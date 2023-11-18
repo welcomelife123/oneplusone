@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Reading design: USR44.prj
 
@@ -104,7 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Arti/Documents/VLSI/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/USR44/USR44.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/USR44 is now defined in a different file.  It was defined in "C:/Users/Arti/Documents/VLSI/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/USR44/USR44.vhd", and is now defined in "C:/Users/Arti/Documents/oneplusone/parta/USR44/USR44.vhd".
+WARNING:HDLParsers:3607 - Unit work/USR44/Behavioral is now defined in a different file.  It was defined in "C:/Users/Arti/Documents/VLSI/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/USR44/USR44.vhd", and is now defined in "C:/Users/Arti/Documents/oneplusone/parta/USR44/USR44.vhd".
+Compiling vhdl file "C:/Users/Arti/Documents/oneplusone/parta/USR44/USR44.vhd" in Library work.
 Architecture behavioral of Entity usr44 is up to date.
 
 =========================================================================
@@ -127,7 +129,7 @@ Entity <USR44> analyzed. Unit <USR44> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <USR44>.
-    Related source file is "C:/Users/Arti/Documents/VLSI/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/USR44/USR44.vhd".
+    Related source file is "C:/Users/Arti/Documents/oneplusone/parta/USR44/USR44.vhd".
     Found 1-bit register for signal <S_OUT>.
     Found 4-bit register for signal <P_OUT>.
     Found 1-bit register for signal <FLAG>.
@@ -356,14 +358,14 @@ Offset:              4.040ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.15 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.73 secs
  
 --> 
 
-Total memory usage is 231036 kilobytes
+Total memory usage is 231160 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

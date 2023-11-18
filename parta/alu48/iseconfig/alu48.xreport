@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-10-17T00:54:18</DateModified>
+  <DateModified>2023-11-17T21:42:24</DateModified>
   <ModuleName>alu48</ModuleName>
-  <SummaryTimeStamp>2022-09-16T18:38:05</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Arti/Downloads/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/alu48/iseconfig/alu48.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Arti/Downloads/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/alu48\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2023-11-17T21:38:38</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Arti/Documents/oneplusone/parta/alu48/iseconfig/alu48.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Arti/Documents/oneplusone/parta/alu48\</ImplementationReportsDirectory>
   <DateInitialized>2022-09-16T18:13:49</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

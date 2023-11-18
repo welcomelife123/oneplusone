@@ -2,14 +2,14 @@ Command line:
    USR44_TB_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  54428
+     -socket  53449
 
-Tue Sep 27 18:03:48 2022
+Sat Nov 18 00:05:54 2023
 
 
- Elaboration Time: 0.015625 sec
+ Elaboration Time: 0.09375 sec
 
- Current Memory Usage: 821.24 Meg
+ Current Memory Usage: 828.383 Meg
 
  Total Signals          : 16
  Total Nets             : 19
@@ -21,9 +21,9 @@ Tue Sep 27 18:03:48 2022
  Total Scalar Nets and Variables : 398
 Total Line Count : 57
 
- Total Simulation Time: 0.234375 sec
+ Total Simulation Time: 0.125 sec
 
- Current Memory Usage: 663.691 Meg
+ Current Memory Usage: 1143.48 Meg
 
-Tue Sep 27 18:05:42 2022
+Sat Nov 18 00:06:23 2023
 

@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\sem7\42410\USR44\USR44_TB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/sem7/42410/USR44/USR44_TB_isim_beh.wdb 
+Running: C:\Users\Arti\Documents\oneplusone\parta\USR44\USR44_TB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Arti/Documents/oneplusone/parta/USR44/USR44_TB_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

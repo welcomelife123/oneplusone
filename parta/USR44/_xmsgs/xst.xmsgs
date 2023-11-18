@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/USR44</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Arti/Documents/VLSI/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/USR44/USR44.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Arti/Documents/oneplusone/parta/USR44/USR44.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/USR44/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Arti/Documents/VLSI/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/USR44/USR44.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Arti/Documents/oneplusone/parta/USR44/USR44.vhd</arg>&quot;.
+</msg>
+
 </messages>
 

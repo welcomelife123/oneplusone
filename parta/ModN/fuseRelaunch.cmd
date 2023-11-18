@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/chittaranjan/opt/projects_dir/ModN/modn_testbench_isim_beh.exe" -prj "/home/chittaranjan/opt/projects_dir/ModN/modn_testbench_beh.prj" "work.modn_testbench" 
+-intstyle "ise" -incremental -o "C:/Users/Arti/Documents/oneplusone/parta/ModN/MOD_N_Counter_isim_beh.exe" -prj "C:/Users/Arti/Documents/oneplusone/parta/ModN/MOD_N_Counter_beh.prj" "work.MOD_N_Counter" 

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-9QVK45K::  Sat Oct 21 09:56:34 2023
+DESKTOP-9QVK45K::  Sat Nov 18 00:05:08 2023
 
 par -w -intstyle ise -ol high -t 1 USR44_map.ncd USR44.ncd USR44.pcf 
 
@@ -99,7 +99,7 @@ Phase 10.5  Local Placement Optimization
 Phase 10.5  Local Placement Optimization (Checksum:7469e1fe) REAL time: 6 secs 
 
 Total REAL time to Placer completion: 6 secs 
-Total CPU  time to Placer completion: 2 secs 
+Total CPU  time to Placer completion: 3 secs 
 Writing design to file USR44.ncd
 
 
@@ -107,34 +107,34 @@ Writing design to file USR44.ncd
 Starting Router
 
 
-Phase  1  : 57 unrouted;      REAL time: 9 secs 
+Phase  1  : 57 unrouted;      REAL time: 8 secs 
 
-Phase  2  : 49 unrouted;      REAL time: 9 secs 
+Phase  2  : 49 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 18 unrouted;      REAL time: 9 secs 
+Phase  3  : 18 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 18 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Phase  4  : 18 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
-
-Updating file: USR44.ncd with current fully routed design.
-
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
-
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
 Updating file: USR44.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Updating file: USR44.ncd with current fully routed design.
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Total REAL time to Router completion: 10 secs 
-Total CPU time to Router completion: 6 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Total REAL time to Router completion: 9 secs 
+Total CPU time to Router completion: 4 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -189,10 +189,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 11 secs 
-Total CPU time to PAR completion: 6 secs 
+Total REAL time to PAR completion: 9 secs 
+Total CPU time to PAR completion: 5 secs 
 
-Peak Memory Usage:  235 MB
+Peak Memory Usage:  234 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

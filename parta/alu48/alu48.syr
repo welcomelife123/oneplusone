@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: alu48.prj
 
@@ -104,8 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Arti/Downloads/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/alu48/alu48.vhd" in Library work.
-Architecture alu48_arch of Entity alu48 is up to date.
+Compiling vhdl file "C:/Users/Arti/Documents/oneplusone/parta/alu48/alu48.vhd" in Library work.
+Entity <alu48> compiled.
+Entity <alu48> (Architecture <alu48_arch>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -127,7 +128,7 @@ Entity <alu48> analyzed. Unit <alu48> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <alu48>.
-    Related source file is "C:/Users/Arti/Downloads/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/alu48/alu48.vhd".
+    Related source file is "C:/Users/Arti/Documents/oneplusone/parta/alu48/alu48.vhd".
     Found 5-bit 8-to-1 multiplexer for signal <result>.
     Found 5-bit adder for signal <result$addsub0000> created at line 60.
     Found 5-bit adder for signal <result$addsub0001> created at line 67.
@@ -316,11 +317,11 @@ Delay:               13.511ns (Levels of Logic = 14)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.01 secs
+Total CPU time to Xst completion: 3.61 secs
  
 --> 
 
-Total memory usage is 231692 kilobytes
+Total memory usage is 4499352 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

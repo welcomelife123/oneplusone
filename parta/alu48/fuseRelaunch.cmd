@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Arti/Downloads/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/alu48/alu48_tb_isim_beh.exe" -prj "C:/Users/Arti/Downloads/sppu_e-tc_notes_and_praticals-master/sppu_e-tc_notes_and_praticals-master/sem7/vlsi_praticals/parta/parta/alu48/alu48_tb_beh.prj" "work.alu48_tb" 
+-intstyle "ise" -incremental -o "C:/Users/Arti/Documents/oneplusone/parta/alu48/alu48_tb_isim_beh.exe" -prj "C:/Users/Arti/Documents/oneplusone/parta/alu48/alu48_tb_beh.prj" "work.alu48_tb" 
